@@ -3,6 +3,7 @@ import unittest2
 from src.persistence.JsonPersistence import JsonPersistence
 from testing.TestData import TestData
 from src.rest.CoinGeckoCoinSanitizer import CoinSanitizer
+from src.persistence.JsonPersistence import JsonPersistence
 
 class CoinSanitizerTest(unittest2.TestCase):
 
@@ -16,6 +17,7 @@ class CoinSanitizerTest(unittest2.TestCase):
             coin = CoinSanitizer().sanitize(fullCoin)
             actual.append(coin)
 
+        # JsonPersistence.persistJson(actual, actual, 'sanitizedCoinData.json')
         self.assertEqual(expected, actual)
 
 if __name__ == '__main__':

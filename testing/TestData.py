@@ -7,10 +7,10 @@ class TestData():
         pass
 
     def get_full_coin_data(self):
-        return JsonPersistence().loadJson('testData/fullCoinData.json')
+        return JsonPersistence().loadJson('testing/testData/fullCoinData.json')
 
     def get_sanitized_coin_data(self):
-        return JsonPersistence().loadJson('testData/sanitizedCoinData.json')
+        return JsonPersistence().loadJson('testing/testData/sanitizedCoinData.json')
 
     
       

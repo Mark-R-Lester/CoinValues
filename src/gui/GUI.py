@@ -2,8 +2,8 @@
 import sys
 from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtQml import QQmlApplicationEngine
-from coins.gui.misc.Clock import Clock
-from coins.gui.feeds.MainCoinFeed import MainCoinFeed
+from src.gui.misc.Clock import Clock
+from src.gui.feeds.MainCoinFeed import MainCoinFeed
 
 class GuiRunner():
     '''Runs the qt application'''
@@ -16,7 +16,7 @@ class GuiRunner():
 
     def run(self):
         '''Loads images and starts all data threads'''
-        self.engine.load('coins/gui/main.qml')
+        self.engine.load('src/gui/main.qml')
         self.startClock()
         self.startCoinFeeds()
 
@@ -24,7 +24,6 @@ class GuiRunner():
     def startClock(self):
         '''Thread providing a time feed to the gui'''
         clock = Clock()
-        print('-------------', self.engine.rootObjects())
         self.engine.rootObjects()[0].setProperty('clock', clock)
         clock.start()
 
