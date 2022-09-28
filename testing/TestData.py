@@ -12,5 +12,8 @@ class TestData():
     def get_sanitized_coin_data(self):
         return JsonPersistence().loadJson('testing/testData/sanitizedCoinData.json')
 
+    def get_fixed_supply_fating_coin_data(self):
+        return JsonPersistence().loadJson('testing/testData/fixedSupplyRatingCoinData.json')
+
     
       

@@ -17,7 +17,7 @@ class CoinSanitizerTest(unittest2.TestCase):
             coin = CoinSanitizer().sanitize(fullCoin)
             actual.append(coin)
 
-        # JsonPersistence.persistJson(actual, actual, 'sanitizedCoinData.json')
+        # JsonPersistence().persistJson(actual, 'sanitizedCoinData.json')
         self.assertEqual(expected, actual)
 
 if __name__ == '__main__':

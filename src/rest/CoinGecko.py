@@ -8,10 +8,12 @@ class CoinGeckoUrl(Enum):
     COIN_LIST = 'https://api.coingecko.com/api/v3/coins/list'
     PING = 'https://api.coingecko.com/api/v3/ping'
     COIN = 'https://api.coingecko.com/api/v3/coins/%s'
+    COIN_ALL_DATA = 'https://api.coingecko.com/api/v3/coins/%s?tickers=true&market_data=true&community_data=true&developer_data=true&sparkline=true'
     COIN_TICKERS = 'https://api.coingecko.com/api/v3/coins/%s/tickers'
     COIN_MARKETS = 'https://api.coingecko.com/api/v3/coins/markets'
     COIN_MARKET_CHART = 'https://api.coingecko.com/api/v3/coins/%s/market_chart'
     COIN_MARKET_CHART_RANGE = 'https://api.coingecko.com/api/v3/coins/%s/market_chart/range'
+    
 
 
 class CoinGecko:
