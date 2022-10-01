@@ -3,9 +3,9 @@ import dbm
 from time import sleep
 
 from src.rest.CoinGecko import CoinGecko
-from src.rating.FixedSupplyCoinRating import FixedSupplyCoinRating
+from src.rating.TickerPriceDiffRating import TickerPriceDiffRating
 
-class FixedSupplyCoinFeed:
+class TickersFeed:
     '''Class message'''
 
     def __init__(self):
@@ -19,19 +19,18 @@ class FixedSupplyCoinFeed:
             
             for coin in self.__feed(coins):
                 if coin:
-                    self.db['lastSaved'] = coin['id']
-                    self.db[coin['id']] = str(coin)
-                    coins = []
-                    coins.append(coin)
-                    yield coins
+                    tickers = []
+                    tickers.append(coin)
+                    yield tickers
 
     def __feed(self, coins):
-
-        '''Fetches a sanitized coins one at a time, adds a rating to them 
+        '''Fetches sanitized tickers one at a time, adds a rating to them 
         then yields them inside an array to the calling function'''
        
         for coin in coins:
-            sanitizedCoin = CoinGecko().get_sanitized_coin(coin['id'])
-            sanitizedCoin = FixedSupplyCoinRating().add_rating(sanitizedCoin)
-            yield sanitizedCoin
+            id = coin['id']
+            sanitizedTicker = CoinGecko().get_sanitized_coin_ticker(id)
+            sanitizedTicker = TickerPriceDiffRating().add_rating(sanitizedTicker, coin['symbol'])
+            self.db[id] = sanitizedTicker
+            yield sanitizedTicker
             sleep(2.6)

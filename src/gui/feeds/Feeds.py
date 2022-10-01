@@ -6,7 +6,7 @@ from PyQt6.QtCore import QObject, pyqtSignal
 from src.feeds.FixedSupplyCoinFeed import FixedSupplyCoinFeed
 
 
-class MainCoinFeed(QObject):
+class Feeds(QObject):
     
     def __init__(self):
         QObject.__init__(self)

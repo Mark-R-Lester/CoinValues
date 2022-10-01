@@ -3,7 +3,7 @@ import sys
 from PyQt6.QtGui import QGuiApplication
 from PyQt6.QtQml import QQmlApplicationEngine
 from src.gui.misc.Clock import Clock
-from src.gui.feeds.MainCoinFeed import MainCoinFeed
+from src.gui.feeds.Feeds import Feeds
 
 class GuiRunner():
     '''Runs the qt application'''
@@ -29,7 +29,7 @@ class GuiRunner():
 
     def startCoinFeeds(self):
         '''Creates theads providing coin data to the gui'''
-        coin_stream = MainCoinFeed()
+        coin_stream = Feeds()
         self.engine.rootObjects()[0].setProperty('coinStream', coin_stream)
         coin_stream.stream()
 
