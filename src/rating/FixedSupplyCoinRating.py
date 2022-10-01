@@ -10,11 +10,14 @@ class FixedSupplyCoinRating():
         pass
 
     def add_rating(self, coin):
-        '''Gets the coin rating and adds it to the coin'''
+        '''Gets the coin rating and adds it to the coin None is returned if the coin is unrateable'''
 
-        coin['rating'] = self.__get_rating(coin)
-        return coin
-
+        rating = self.__get_rating(coin)
+        if rating:
+            coin['rating'] = rating
+            return coin
+        else:
+            return
 
     def __get_rating(self, coin):
         '''Ensures the coin can be rated.
@@ -70,4 +73,7 @@ class FixedSupplyCoinRating():
             ath = sanitize(coin['ath'])
             return (100/ath) * current_price
 
-        return (total_supply_percentage(coin)*2) * ( public_interest_percentage(coin)*2) * percent_of_all_time_high(coin)
+        rating = (total_supply_percentage(coin)*2) * ( public_interest_percentage(coin)*2) * (100 - percent_of_all_time_high(coin))
+        rating = round(rating, 2)
+        print(rating)
+        return rating

@@ -3,7 +3,7 @@ from time import strftime, gmtime, sleep
 import threading
 from PyQt6.QtCore import QObject, pyqtSignal
 
-from src.feeds.CoinFeed import CoinFeed
+from src.feeds.FixedSupplyCoinFeed import FixedSupplyCoinFeed
 
 
 class MainCoinFeed(QObject):
@@ -17,13 +17,13 @@ class MainCoinFeed(QObject):
         self.updated.emit(coins)
 
     def stream(self):
-        thread = threading.Thread(target=self._stream)
+
+        def fixed_supply_stream():
+            feed = FixedSupplyCoinFeed().feed()
+            while True:
+                for coins in feed:
+                    self.emit_coins(coins)
+       
+        thread = threading.Thread(target=fixed_supply_stream)
         thread.daemon = True
         thread.start()
-
-    def _stream(self):
-        feed = CoinFeed().feed()
-        while True:
-            for coins in feed:
-                self.emit_coins(coins)
-       

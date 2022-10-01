@@ -29,19 +29,19 @@ class FixedSupplyCoinRatingTest(unittest2.TestCase):
         self.__test(None)
 
     def test_add_rating_values_are_valid(self):
-        self.__test(4000.0)
+        self.__test(36000.0)
 
     def test_add_rating_circulating_supply_zero(self):
         self.coin['circulating_supply'] = 0.0
-        self.__test(4.0)
+        self.__test(36.0)
 
     def test_add_rating_current_price_zero(self):
         self.coin['current_price'] = 0.0
-        self.__test(400.0)
+        self.__test(39600.0)
 
     def test_add_rating_public_interest_score_zero(self):
         self.coin['public_interest_score'] = 0.0
-        self.__test(400.0)
+        self.__test(3600.0)
 
     def __test(self, expected):
         actual = FixedSupplyCoinRating().add_rating(self.coin)
