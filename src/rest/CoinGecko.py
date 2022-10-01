@@ -2,6 +2,7 @@
 from enum import Enum
 import requests
 from src.rest.CoinGeckoCoinSanitizer import CoinSanitizer
+from src.rest.CoinGeckoTickersSanitizer import TickersSanitizer
 
 class CoinGeckoUrl(Enum):
     '''Class description'''
@@ -46,6 +47,11 @@ class CoinGecko:
         '''Method description'''
         response = requests.get(CoinGeckoUrl.COIN_TICKERS.value % identifier)
         return response.json()
+
+    def get_coin_high_low_price(self, identifier, symbol):
+        '''Method description'''
+        tickers = self.get_coin_tickers(identifier)
+        return TickersSanitizer(tickers, symbol)
 
     def get_coin_markets(self, identifier):
         '''Method description'''

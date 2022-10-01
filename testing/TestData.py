@@ -8,6 +8,9 @@ class TestData():
 
     def get_full_coin_data(self):
         return JsonPersistence().loadJson('testing/testData/fullCoinData.json')
+    
+    def get_full_tickers_data(self):
+        return JsonPersistence().loadJson('testing/testData/fullTickersData.json')
 
     def get_sanitized_coin_data(self):
         return JsonPersistence().loadJson('testing/testData/sanitizedCoinData.json')

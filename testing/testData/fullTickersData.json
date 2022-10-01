@@ -1,0 +1,230 @@
+
+{
+    "name": "Wonderland",
+    "tickers": [
+      {
+        "base": "0XB31F66AA3C1E785363F0875A1B74E27B85FD66C7",
+        "target": "0XB54F16FB19478766A268F172C9480F8DA1A7C9C3",
+        "market": {
+          "name": "Trader Joe",
+          "identifier": "traderjoe",
+          "has_trading_incentive": false
+        },
+        "last": 1.5097093324744,
+        "volume": 864.7709814889989,
+        "converted_last": {
+          "btc": 0.00059117,
+          "eth": 0.00858873,
+          "usd": 11.43
+        },
+        "converted_volume": {
+          "btc": 0.7853033,
+          "eth": 11.409227,
+          "usd": 15189.1
+        },
+        "trust_score": "green",
+        "bid_ask_spread_percentage": 0.609672,
+        "timestamp": "2022-10-01T08:27:19+00:00",
+        "last_traded_at": "2022-10-01T08:27:19+00:00",
+        "last_fetch_at": "2022-10-01T08:33:44+00:00",
+        "is_anomaly": false,
+        "is_stale": false,
+        "trade_url": "https://traderjoexyz.com/trade?inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0xb54f16fb19478766a268f172c9480f8da1a7c9c3",
+        "token_info_url": null,
+        "coin_id": "wrapped-avax",
+        "target_coin_id": "wonderland"
+      },
+      {
+        "base": "0XB31F66AA3C1E785363F0875A1B74E27B85FD66C7",
+        "target": "0XB54F16FB19478766A268F172C9480F8DA1A7C9C3",
+        "market": {
+          "name": "Pangolin",
+          "identifier": "pangolin",
+          "has_trading_incentive": false
+        },
+        "last": 1.54628214824085,
+        "volume": 39.0778387330213,
+        "converted_last": {
+          "btc": 0.00057807,
+          "eth": 0.00839851,
+          "usd": 11.18
+        },
+        "converted_volume": {
+          "btc": 0.03409182,
+          "eth": 0.49530075,
+          "usd": 659.39
+        },
+        "trust_score": "green",
+        "bid_ask_spread_percentage": 0.698695,
+        "timestamp": "2022-10-01T08:09:37+00:00",
+        "last_traded_at": "2022-10-01T08:09:37+00:00",
+        "last_fetch_at": "2022-10-01T08:33:23+00:00",
+        "is_anomaly": false,
+        "is_stale": false,
+        "trade_url": "https://app.pangolin.exchange/#/swap?inputCurrency=0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7&outputCurrency=0xb54f16fb19478766a268f172c9480f8da1a7c9c3",
+        "token_info_url": null,
+        "coin_id": "wrapped-avax",
+        "target_coin_id": "wonderland"
+      },
+      {
+        "base": "0X130966628846BFD36FF31A822705796E8CB8C18D",
+        "target": "0XB54F16FB19478766A268F172C9480F8DA1A7C9C3",
+        "market": {
+          "name": "Trader Joe",
+          "identifier": "traderjoe",
+          "has_trading_incentive": false
+        },
+        "last": 0.0908690893605568,
+        "volume": 132.1520653562637,
+        "converted_last": {
+          "btc": 0.00056789,
+          "eth": 0.00825055,
+          "usd": 10.98
+        },
+        "converted_volume": {
+          "btc": 0.00676935,
+          "eth": 0.098348,
+          "usd": 130.93
+        },
+        "trust_score": "green",
+        "bid_ask_spread_percentage": 0.752293,
+        "timestamp": "2022-10-01T08:08:23+00:00",
+        "last_traded_at": "2022-10-01T08:08:23+00:00",
+        "last_fetch_at": "2022-10-01T08:33:44+00:00",
+        "is_anomaly": false,
+        "is_stale": false,
+        "trade_url": "https://traderjoexyz.com/trade?inputCurrency=0x130966628846bfd36ff31a822705796e8cb8c18d&outputCurrency=0xb54f16fb19478766a268f172c9480f8da1a7c9c3",
+        "token_info_url": null,
+        "coin_id": "magic-internet-money",
+        "target_coin_id": "wonderland"
+      },
+      {
+        "base": "TIME",
+        "target": "USDT",
+        "market": {
+          "name": "Hotbit",
+          "identifier": "hotbit",
+          "has_trading_incentive": false
+        },
+        "last": 11,
+        "volume": 1216.03756,
+        "converted_last": {
+          "btc": 0.00056898,
+          "eth": 0.00826632,
+          "usd": 11
+        },
+        "converted_volume": {
+          "btc": 0.69189501,
+          "eth": 10.052151,
+          "usd": 13382.42
+        },
+        "trust_score": "yellow",
+        "bid_ask_spread_percentage": 7.272727,
+        "timestamp": "2022-10-01T08:25:28+00:00",
+        "last_traded_at": "2022-10-01T08:25:28+00:00",
+        "last_fetch_at": "2022-10-01T08:33:08+00:00",
+        "is_anomaly": false,
+        "is_stale": false,
+        "trade_url": "https://www.hotbit.io/exchange?symbol=TIME_USDT",
+        "token_info_url": null,
+        "coin_id": "wonderland",
+        "target_coin_id": "tether"
+      },
+      {
+        "base": "TIME",
+        "target": "USDT",
+        "market": {
+          "name": "Poloniex",
+          "identifier": "poloniex",
+          "has_trading_incentive": false
+        },
+        "last": 14,
+        "volume": 3.29,
+        "converted_last": {
+          "btc": 0.0007238,
+          "eth": 0.01051309,
+          "usd": 14
+        },
+        "converted_volume": {
+          "btc": 0.0023813,
+          "eth": 0.03458806,
+          "usd": 46.06
+        },
+        "trust_score": "red",
+        "bid_ask_spread_percentage": 28.571429,
+        "timestamp": "2022-10-01T07:06:53+00:00",
+        "last_traded_at": "2022-10-01T07:06:53+00:00",
+        "last_fetch_at": "2022-10-01T08:31:25+00:00",
+        "is_anomaly": false,
+        "is_stale": false,
+        "trade_url": "https://poloniex.com/exchange#time_usdt",
+        "token_info_url": null,
+        "coin_id": "wonderland",
+        "target_coin_id": "tether"
+      },
+      {
+        "base": "TIME",
+        "target": "USDT",
+        "market": {
+          "name": "Gate.io",
+          "identifier": "gate",
+          "has_trading_incentive": false
+        },
+        "last": 140.1,
+        "volume": 31.458,
+        "converted_last": {
+          "btc": 0.00724317,
+          "eth": 0.10520022,
+          "usd": 140.1
+        },
+        "converted_volume": {
+          "btc": 0.2301433,
+          "eth": 3.342613,
+          "usd": 4451.35
+        },
+        "trust_score": null,
+        "bid_ask_spread_percentage": 9.036022,
+        "timestamp": "2022-10-01T08:30:16+00:00",
+        "last_traded_at": "2022-10-01T08:30:16+00:00",
+        "last_fetch_at": "2022-10-01T08:30:16+00:00",
+        "is_anomaly": true,
+        "is_stale": false,
+        "trade_url": "https://gate.io/trade/TIME_USDT",
+        "token_info_url": null,
+        "coin_id": "wonderland",
+        "target_coin_id": "tether"
+      },
+      {
+        "base": "TIME",
+        "target": "ETH",
+        "market": {
+          "name": "Gate.io",
+          "identifier": "gate",
+          "has_trading_incentive": false
+        },
+        "last": 0.1052,
+        "volume": 18.84,
+        "converted_last": {
+          "btc": 0.00724197,
+          "eth": 0.10518271,
+          "usd": 140.07
+        },
+        "converted_volume": {
+          "btc": 0.13660347,
+          "eth": 1.984036,
+          "usd": 2642.14
+        },
+        "trust_score": null,
+        "bid_ask_spread_percentage": 6.93802,
+        "timestamp": "2022-10-01T08:30:16+00:00",
+        "last_traded_at": "2022-10-01T08:30:16+00:00",
+        "last_fetch_at": "2022-10-01T08:30:16+00:00",
+        "is_anomaly": true,
+        "is_stale": false,
+        "trade_url": "https://gate.io/trade/TIME_ETH",
+        "token_info_url": null,
+        "coin_id": "wonderland",
+        "target_coin_id": "ethereum"
+      }
+    ]
+  }
