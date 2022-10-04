@@ -331,6 +331,7 @@ ApplicationWindow {
         }
     }
     function updateModel(coins, model) {
+        console.log('sorting coins')
         coins.forEach(coin => {
                 model.append(
                     {
@@ -342,7 +343,7 @@ ApplicationWindow {
                     }
                 )
             function sortModel(model) {
-                console.log('sorting')
+                
                 var n;
                 var i;
                 for (n=0; n < model.count; n++)

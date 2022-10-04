@@ -26,17 +26,27 @@ class CoinGecko:
     def ping(self):
         '''Method description'''
         response = requests.get(CoinGeckoUrl.PING)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return {}
 
     def get_coin_list(self):
         '''Method description'''
         response = requests.get(CoinGeckoUrl.COIN_LIST.value)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return {}
 
     def get_full_coin(self, identifier):
         '''Gets the coin information from Coin Gecko for the coin identified by the identifer'''
         response = requests.get(CoinGeckoUrl.COIN.value % identifier)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            print('exception has been thrown')
+            return {}
 
     def get_sanitized_coin(self, identifier):
         '''Method description'''
@@ -46,7 +56,10 @@ class CoinGecko:
     def get_coin_tickers(self, identifier):
         '''Method description'''
         response = requests.get(CoinGeckoUrl.COIN_TICKERS.value % identifier)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return {}
 
     def get_sanitized_coin_ticker(self, identifier, symbol):
         '''Method description'''
@@ -56,14 +69,23 @@ class CoinGecko:
     def get_coin_markets(self, identifier):
         '''Method description'''
         response = requests.get(CoinGeckoUrl.COIN_MARKETS.value % identifier)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return {}
 
     def get_coin_market_chart(self, identifier):
         '''Method description'''
         response = requests.get(CoinGeckoUrl.COIN_MARKET_CHART.value % identifier)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return {}
 
     def get_coin_market_chart_range(self, identifier):
         '''Method description'''
         response = requests.get(CoinGeckoUrl.COIN_MARKET_CHART_RANGE.value % identifier)
-        return response.json()
+        try:
+            return response.json()
+        except:
+            return {}

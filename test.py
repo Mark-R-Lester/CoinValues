@@ -11,14 +11,14 @@ if __name__ == "__main__":
     suite = unittest2.defaultTestLoader.loadTestsFromTestCase(TickerPriceDiffRatingTest)
     unittest2.TextTestRunner().run(suite)
 
-    suite = unittest2.defaultTestLoader.loadTestsFromTestCase(TickersSanitizerTest)
-    unittest2.TextTestRunner().run(suite)
+    # suite = unittest2.defaultTestLoader.loadTestsFromTestCase(TickersSanitizerTest)
+    # unittest2.TextTestRunner().run(suite)
 
-    suite = unittest2.defaultTestLoader.loadTestsFromTestCase(CoinSanitizerTest)
-    unittest2.TextTestRunner().run(suite)
+    # suite = unittest2.defaultTestLoader.loadTestsFromTestCase(CoinSanitizerTest)
+    # unittest2.TextTestRunner().run(suite)
 
-    suite = unittest2.defaultTestLoader.loadTestsFromTestCase(JsonPersistenceTest)
-    unittest2.TextTestRunner().run(suite)
+    # suite = unittest2.defaultTestLoader.loadTestsFromTestCase(JsonPersistenceTest)
+    # unittest2.TextTestRunner().run(suite)
 
-    suite = unittest2.defaultTestLoader.loadTestsFromTestCase(FixedSupplyCoinRatingTest)
-    unittest2.TextTestRunner().run(suite)
+    # suite = unittest2.defaultTestLoader.loadTestsFromTestCase(FixedSupplyCoinRatingTest)
+    # unittest2.TextTestRunner().run(suite)

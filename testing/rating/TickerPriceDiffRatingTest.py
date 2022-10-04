@@ -1,8 +1,6 @@
 import unittest2
 
 from src.rating.TickerPriceDiffRating import TickerPriceDiffRating
-
-
 class TickerPriceDiffRatingTest(unittest2.TestCase):
 
     def setUp(self):
@@ -11,7 +9,6 @@ class TickerPriceDiffRatingTest(unittest2.TestCase):
                         'highest_price': 140.1, 
                         'lowest_price': 10.98
                     }
-
 
     def test_non_zero_prices(self):
         expected = 84.62
@@ -27,10 +24,6 @@ class TickerPriceDiffRatingTest(unittest2.TestCase):
         expected = None
         self.ticker['highest_price'] =  0.0
         self.assertEqual(expected, None)
-
-
-    
-       
 
 if __name__ == '__main__':
     unittest2.main()
