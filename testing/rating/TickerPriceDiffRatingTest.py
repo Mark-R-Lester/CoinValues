@@ -11,7 +11,7 @@ class TickerPriceDiffRatingTest(unittest2.TestCase):
                     }
 
     def test_non_zero_prices(self):
-        expected = 84.62
+        expected = 92.16
         actual = TickerPriceDiffRating().add_rating(self.ticker)
         self.assertEqual(expected, actual['rating'] if actual else None)
 

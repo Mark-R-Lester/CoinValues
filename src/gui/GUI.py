@@ -16,21 +16,21 @@ class GuiRunner():
 
     def run(self):
         '''Loads images and starts all data threads'''
+
+        def startClock():
+            '''Thread providing a time feed to the gui'''
+            clock = Clock()
+            self.engine.rootObjects()[0].setProperty('clock', clock)
+            clock.start()
+
+        def startCoinFeeds():
+            '''Creates theads providing coin data to the gui'''
+            coin_stream = Feeds()
+            self.engine.rootObjects()[0].setProperty('coinStream', coin_stream)
+            coin_stream.stream()
+
         self.engine.load('src/gui/main.qml')
-        self.startClock()
-        self.startCoinFeeds()
-
-  
-    def startClock(self):
-        '''Thread providing a time feed to the gui'''
-        clock = Clock()
-        self.engine.rootObjects()[0].setProperty('clock', clock)
-        clock.start()
-
-    def startCoinFeeds(self):
-        '''Creates theads providing coin data to the gui'''
-        coin_stream = Feeds()
-        self.engine.rootObjects()[0].setProperty('coinStream', coin_stream)
-        coin_stream.stream()
+        startClock()
+        startCoinFeeds()
 
         sys.exit(self.app.exec())

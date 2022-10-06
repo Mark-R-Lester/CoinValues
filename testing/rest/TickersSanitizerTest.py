@@ -10,7 +10,7 @@ class TickersSanitizerTest(unittest2.TestCase):
         '''Sanitizes the ticker data for time and return the highest and lowest prices for symbol'''
         
         fullTickersData = TestData().get_full_tickers_data()
-        expected = {'symbol': 'time', 'highest_price': 140.1, 'lowest_price': 10.98}
+        expected = {'id': 'Wonderland', 'symbol': 'time', 'highest_price': 140.1, 'lowest_price': 10.98}
         actual = TickersSanitizer().sanitize(fullTickersData, 'time')
 
         self.assertEqual(expected, actual)

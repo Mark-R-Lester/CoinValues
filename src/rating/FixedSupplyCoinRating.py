@@ -75,5 +75,4 @@ class FixedSupplyCoinRating():
 
         rating = (total_supply_percentage(coin)*2) * ( public_interest_percentage(coin)*2) * (100 - percent_of_all_time_high(coin))
         rating = round(rating, 2)
-        print(rating)
         return rating

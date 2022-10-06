@@ -20,4 +20,4 @@ class TickerPriceDiffRating():
         max = ticker['highest_price']
         if min == 0 or max == 0:
             return
-        return round(100 - ((max/100) * min), 2)
+        return round(100 - ((100/max) * min), 2)

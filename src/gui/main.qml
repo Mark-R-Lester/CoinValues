@@ -30,7 +30,7 @@ ApplicationWindow {
             id: defiModel
         }
         ListModel{
-            id: exchangeModel
+            id: tickerModel
         }
         RowLayout {
             id: coinHeaders
@@ -229,7 +229,10 @@ ApplicationWindow {
             Connections {
                 target: root.coinStream
                 function onUpdated(coins) {
-                   root.updateModel(coins, fixedSupplyModel)
+                    root.updateModel(coins, fixedSupplyModel)
+                }
+                function onUpdatedTickers(tickers) {
+                    root.updateTickerModel(tickers, tickerModel)
                 }
             }
 
@@ -302,7 +305,7 @@ ApplicationWindow {
 
                     onClicked: {
                         console.log('clicked')
-                        coinList.model = exchangeModel
+                        coinList.model = tickerModel
                     }
                 }
             }
@@ -342,20 +345,36 @@ ApplicationWindow {
                         rating: coin.rating
                     }
                 )
-            function sortModel(model) {
-                
-                var n;
-                var i;
-                for (n=0; n < model.count; n++)
-                    for (i=n+1; i < model.count; i++) {
-                        if (model.get(n).rating < model.get(i).rating) {
-                            model.move(i, n, 1);
-                            n=0;
-                        }
-                    }
-            }
+            
             sortModel(model)
         })
+    }
+    function updateTickerModel(tickers, model) {
+        console.log('sorting tickers')
+        tickers.forEach(ticker => {
+                model.append(
+                    {
+                        symbol: ticker.symbol, 
+                        currentPrice: '??', 
+                        allTimeHigh: ticker.highest_price, 
+                        allTimeLow: ticker.lowest_price,
+                        rating: ticker.rating
+                    }
+                )
+            
+            sortModel(model)
+        })
+    }
+    function sortModel(model) {
+        var n;
+        var i;
+        for (n=0; n < model.count; n++)
+            for (i=n+1; i < model.count; i++) {
+                if (model.get(n).rating < model.get(i).rating) {
+                    model.move(i, n, 1);
+                    n=0;
+                }
+            }
     }
 }
 
