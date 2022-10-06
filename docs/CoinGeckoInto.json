@@ -1,0 +1,25 @@
+{
+    "id": "The coins id",
+    "symbol": "The official symbol for the coin (Bitcoin = btc)",
+    "categories": "An array of strings",
+    "coinGecko_score": {"min": 0, "max": 100},
+    "developer_score": {"min": 0, "max": 100},
+    "liquidity_score": {"min": 0, "max": 100},
+    "public_interest_score": {"min": 0, "max": 1},
+    "total_value_locked": {"min": 0, "max": "?"},
+    "mcap_to_tvl_ratio": {"min": 0, "max": 1},
+    "fdv_to_tvl_ratio": {"min": 0, "max": 100},
+    "current_price": {"min": 0, "max": "?"},
+    "ath": {"min": 0, "max": "?"},
+    "ath_change_percentage": {"min": 0 , "max": 100},
+    "atl":{"min": 0, "max": "?"},
+    "market_cap": {"min": 0, "max": "?"},
+    "fully_diluted_valuation": {"min": 0, "max": "?"},
+    "max_supply": {"min": 0, "max": "?"},
+    "total_supply": {"min": 0, "max": "?"},
+    "circulating_supply": {"min": 0, "max": "?"},
+    "atl_date": "The date of the coins all tim low",
+    "ath_date": "The date of the coins all time high",
+    "genesis_date": "The date the coin was created"
+  }
+  
